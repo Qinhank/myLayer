@@ -1,0 +1,32 @@
+@import "../sass/_layout.scss";
+
+.myLayer-full{
+	margin:0;
+	height: 0;
+	opacity: 0;
+	text-align: center;
+	background: rgba(0,0,0,0.8);
+	position: relative;
+	z-index: 1;
+	transition: all .3s;
+	@include flex(){flex-wrap: wrap;}
+	&>div>a{
+		display: block;
+		position: relative;
+		z-index: 2;
+		font-size: 25px;
+		color: white;
+		border:1px solid #eee;
+		margin:0 20px;
+		padding:30px 0;
+		cursor: pointer;
+		border-radius: 15px;
+		&:hover{
+			background:rgba(255,255,255,0.1);
+		};
+		&::before{
+			display:block;
+			font-size: 50px;	
+		};
+	}
+}
